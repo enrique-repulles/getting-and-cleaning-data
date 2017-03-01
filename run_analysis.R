@@ -5,16 +5,18 @@ library(dplyr)
 run_analysis <- function ()
 {
   # Data download
-  data.path <- "./data-cleaning-project-data"  
-  data.url <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-  data.file <- paste0(data.path, "/Dataset.zip")
+  #data.path <- "./data-cleaning-project-data"  
+  #data.url <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+  #data.file <- paste0(data.path, "/Dataset.zip")
   
-  if (!file.exists(data.path)) {
-    dir.create(data.path)
-    download.file(url = data.url, destfile = data.file)
-    unzip (data.file, exdir = data.path)
-  }  
+  #if (!file.exists(data.path)) {
+  #  dir.create(data.path)
+  #  download.file(url = data.url, destfile = data.file)
+  #  unzip (data.file, exdir = data.path)
+  #}  
 
+  data.path <- "."  # for running from working directory
+  
   #Step 1: Creating the dataset merging test and training sets
   
   train.file1 <-paste0(data.path,"/UCI HAR Dataset/train/subject_train.txt")
